@@ -1,0 +1,8 @@
+---
+# handlers file for ankzzapacherole
+#
+- name: Start service "{{ svc_name }}"
+  service:
+   name: "{{ web }}"
+   state: started
+   enabled: true

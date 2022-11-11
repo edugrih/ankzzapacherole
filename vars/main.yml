@@ -1,0 +1,6 @@
+---
+# vars file for ankzzapacherole
+#
+web: httpd
+location: /var/www/html/
+svc_name: httpd

@@ -1,0 +1,18 @@
+---
+# tasks file for ankzzapacherole
+- name: Installing package "{{ web }}"
+  yum:
+   name: "{{ web }}"
+   state: present
+
+- name: Create index file
+  template:
+   src: "{{ web }}.j2"
+   dest: "{{ location }}index.html"
+
+- name: Create static file
+  copy:
+   src: ankzz.html
+   dest: "{{ location }}"
+  notify: Start service "{{ svc_name }}"
+
